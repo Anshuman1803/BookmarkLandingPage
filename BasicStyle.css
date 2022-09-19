@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    transition: all 1s ease-in-out;
+}
+
+main {
+    max-width: 100vw;
+    height: 100vh;
+}
+
+/* Header Section Start */
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+}
+
+/* Navbar */
+.navTitle {
+    display: none;
+}
+
+.Footernav {
+    display: none;
+}
+
+nav {
+    width: 40%;
+    padding: 0.5em 1em;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    font-weight: 500;
+    text-decoration: none;
+    color: hsl(229, 31%, 21%);
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+}
+
+nav ul li button {
+    text-transform: uppercase;
+    background-color: hsl(0, 94%, 66%);
+    border: none;
+    width: 100px;
+    padding: 1em;
+    border-radius: 5px;
+    color: hsl(228, 11%, 91%);
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+nav ul li button:hover {
+    cursor: pointer;
+    border: 2px solid hsl(0, 94%, 66%);
+    background: transparent;
+    color: hsl(0, 94%, 66%);
+
+}
+
+.MenuButtons {
+    display: none;
+}
+
+/* Home section Start */
+
+#Home {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+#Home .HomeContent {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.5em;
+    padding: 1.5em;
+}
+
+#Home .HomeContent h1 {
+    font-size: 40px;
+    width: 80%;
+    font-weight: 500;
+    color: hsl(229, 31%, 21%);
+
+}
+
+#Home .HomeContent p {
+    color: hsl(229, 8%, 60%);
+    font-size: 18px;
+    font-weight: 400;
+    width: 80%;
+    line-height: 1.5em;
+
+}
+
+#Home .HomeContent .Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+#ChromeButton {
+    color: white;
+    border: none;
+    background-color: hsl(231, 69%, 60%);
+    font-weight: 500;
+}
+
+#ChromeButton:hover {
+    background: transparent;
+    color: hsl(231, 69%, 60%);
+    border: 1px solid hsl(231, 69%, 60%);
+}
+
+#FirefoxButton {
+    color: hsl(229, 31%, 21%);
+    border: none;
+    font-weight: 500;
+}
+
+#FirefoxButton:hover {
+    background: transparent;
+    border: 1px solid hsl(229, 31%, 21%);
+}
+
+#Home .HomeContent .Buttons button {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 200px;
+    padding: 1.3em 2em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#Home .HomePoster {
+    width: 50%;
+    height: 80%;
+}
+
+#Home .HomePoster img {
+    width: 30em;
+    position: absolute;
+    right: 5%;
+}
+
+#Home .HomePoster .bg {
+    position: absolute;
+    background-color: hsl(231, 69%, 60%);
+    height: 300px;
+    width: 500px;
+    border-radius: 0 0 0 40%;
+    top: 300px;
+    right: 0px;
+    z-index: -5;
+}
+
+/* Features Section Start */
+
+.Features {
+    height: 150vh;
+    width: 100%;
+}
+
+.Features .FeaturesTitle {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+    margin: 2em auto;
+    padding: 1.3em;
+}
+
+.Features .FeaturesTitle h2 {
+    color: hsl(229, 31%, 21%);
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.Features .FeaturesTitle p {
+    color: hsl(229, 8%, 60%);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.Features .FeaturesSelection {
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    color: hsl(229, 8%, 60%);
+}
+
+.Features .FeaturesSelection .FeaturesOption {
+
+    height: 100%;
+    padding: 1.5em;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.active {
+    color: hsl(229, 31%, 21%);
+    border-bottom: 4px solid hsl(0, 94%, 66%);
+    ;
+}
+
+.Features .FeaturesSelection .FeaturesOption:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+
+}
+
+.Features .FeaturesTab {
+    margin-top: 1em;
+    width: 100%;
+    height: 60%;
+    padding: 1em 3em;
+}
+
+.Features .FeaturesTab .tab {
+    margin: 0 auto;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Tab-1 {
+    display: flex;
+}
+
+#Tab-2 {
+    display: none;
+}
+
+#Tab-3 {
+    display: none;
+}
+
+.Features .FeaturesTab .tab .TabContent {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 0 3em;
+}
+
+.Features .FeaturesTab .tab .TabContent h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: hsl(229, 31%, 21%);
+
+}
+
+.Features .FeaturesTab .tab .TabContent p {
+    color: hsl(229, 8%, 60%);
+    line-height: 1.3em;
+    font-size: 18px;
+    text-align: left;
+
+}
+
+.Features .FeaturesTab .tab .TabContent button {
+    cursor: pointer;
+    background-color: hsl(231, 69%, 60%);
+    border: none;
+    width: 130px;
+    padding: 1.2em;
+    border-radius: 5px;
+    color: hsl(228, 11%, 91%);
+    font-weight: 500;
+}
+
+
+.Features .FeaturesTab .tab .TabPoster {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 1.5em 0;
+}
+
+.Features .FeaturesTab .tab .TabPoster img {
+    width: 25em;
+    right: 5%;
+    position: absolute;
+}
+
+.Features .FeaturesTab .tab .TabPoster .bg-2 {
+    position: absolute;
+    z-index: -5;
+    background-color: hsl(231, 69%, 60%);
+    height: 275px;
+    width: 400px;
+    border-radius: 0 0 30% 0;
+    top: 155px;
+}
+
+
+/* DownloadExtension Section Start */
+.DownloadExtension {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.DownloadExtension .DownloadExeTitle {
+    width: 45%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.DownloadExtension .DownloadExeTitle h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: hsl(229, 31%, 21%);
+}
+
+.DownloadExtension .DownloadExeTitle p {
+    color: hsl(229, 8%, 60%);
+    font-weight: 400;
+}
+
+.DownloadExtension .ExtensionCardContainer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 1em;
+}
+
+.DownloadExtension .ExtensionCardContainer .Card {
+    height: 90%;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 1.5em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-image: url(./images/bg-dots.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 70%;
+    border-radius: 15px;
+}
+
+.DownloadExtension .ExtensionCardContainer .Card .ExeName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.3em;
+
+}
+
+.DownloadExtension .ExtensionCardContainer .Card img {
+    width: 100px;
+
+}
+
+.DownloadExtension .ExtensionCardContainer .Card h3 {
+    color: hsl(229, 31%, 21%);
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.DownloadExtension .ExtensionCardContainer .Card span {
+    font-size: 16px;
+    color: hsl(229, 8%, 60%);
+}
+
+.DownloadExtension .ExtensionCardContainer .Card button {
+    background-color: hsl(231, 69%, 60%);
+    padding: 1.2em 0em;
+    width: 100%;
+    border-radius: 10px;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 500;
+    border: none;
+}
+
+.DownloadExtension .ExtensionCardContainer .Card button:hover {
+    cursor: pointer;
+    background: transparent;
+    color: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+}
+
+#FirefoxExtensionCard {
+    margin-top: 30px;
+}
+
+#OperaExtensionCard {
+    margin-top: 50px;
+}
+
+
+/* FAQContainer style start */
+.FAQContainer {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+.FAQContainer .FAQtitle {
+    height: 25%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+}
+
+.FAQContainer .FAQtitle h2 {
+    color: hsl(229, 31%, 21%);
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.FAQContainer .FAQtitle p {
+    font-size: 16px;
+    color: hsl(229, 8%, 60%);
+    width: 65%;
+}
+
+.FAQContainer .FAQ {
+    width: 75%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 3em;
+}
+.question {
+    color: hsl(229, 31%, 21%);
+    font-weight: 500;
+    padding: 1.5em;
+    border-top: 2px solid rgba(0, 0, 0, 0.075);
+    width: 90%;
+  }
+.question:hover {
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+  }
+  .question:nth-child(4) {
+     border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+     
+  }
+  .q1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .answer {
+    padding: 1em 0em;
+    font-weight: 400;
+    color: hsl(229, 8%, 60%);
+    width: 80%;
+    line-height: 1.9em;
+    font-size: 18px;
+  }
+  
+  .FAQ .FAQButton {
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+  }
+  .FAQ .FAQButton button{
+    
+      background-color: hsl(231, 69%, 60%);
+      padding: 1.2em 0em;
+      width: 25%;
+      border-radius: 10px;
+      text-transform: capitalize;
+      color: white;
+      font-weight: 500;
+      border: none;
+  }
+  .FAQ .FAQButton button:hover{
+    cursor: pointer;
+    background: transparent;
+    color: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+  }
+.block {
+    display: none;
+    transform: all 0.5s;
+  }
+  .FAQ .question:hover img {
+    transform: rotate(180deg);
+}
+
+/* Form Section Style */
+
+.FormSection{
+    width: 100%;
+    height: 40vh;
+    background-color: hsl(231, 69%, 60%);
+    color: white;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.FormSection .FormTitle{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.FormSection .FormTitle span{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+   
+}
+.FormSection .FormTitle h3{
+    font-size: 25px;
+    font-weight: 500;
+    width: 28%;
+}
+.FormSection form{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20vh;
+}
+.FormSection .EmailSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.FormSection .EmailSection .inputBox{
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#EmailBox{
+    outline: none;
+    border: 2px solid #fff;
+    padding: 1em;
+    width: 270px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#EmailBox:focus{
+outline: none;
+}
+#EmailBox::placeholder{
+    color: hsl(229, 8%, 60%);
+}
+#Erroricon{
+    position: relative;
+    z-index: 10;
+    right: 15%;
+    opacity: 0;
+}
+#ErrorMsg{
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    width: 270px;
+    text-align: left;
+    background-color: #fa5757;
+    padding: 0.5em 0.9em;
+    margin-bottom: 0.5em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0;
+}
+
+#ContactUsButton{
+    border-radius: 5px;
+    padding: 1em 2.5em;
+    background-color: hsl(0, 94%, 66%);
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#ContactUsButton:hover{
+    border:2px solid  hsl(0, 94%, 66%);
+    cursor: pointer;
+    background: white;
+    color: hsl(0, 94%, 66%);
+}
+
+/* footer section start */
+
+footer{
+    height: 10vh;
+    width: 100%;
+    background-color: hsl(229, 31%, 21%); 
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0em 3em;
+}
+footer .FooterLinks{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    
+}
+footer .FooterLinks img{
+    filter: invert(100%);
+}
+footer .FooterLinks ul{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer .FooterLinks ul li{
+    list-style: none;
+    
+}
+footer .FooterLinks ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+footer .FooterLinks ul li a:hover{
+    color: hsl(0, 94%, 66%);
+    cursor: pointer;
+   
+}
+
+footer .SocialSites{
+    width: 20%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer .SocialSites i:hover
+{
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+}
